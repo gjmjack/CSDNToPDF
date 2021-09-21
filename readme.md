@@ -1,6 +1,6 @@
-# Export [CSDN](https://blog.csdn.net/) article to PDF
+# Export [CSDN](https://blog.csdn.net/gjmjack/) article to PDF
 
-This is a node base javascript tool, which is used to quick export [CSDN](https://blog.csdn.net/) articles in pure mode (no ads, no recommendations). And it's build on [Puppeteer](http://www.puppeteerjs.com/) library.
+This is a node base javascript tool, which is used to quick export [CSDN](https://blog.csdn.net/gjmjack/) articles in pure mode (no ads, no recommendations). And it's build on [Puppeteer](http://www.puppeteerjs.com/) library.
 
 ## Quick start
 
@@ -11,10 +11,10 @@ This is a node base javascript tool, which is used to quick export [CSDN](https:
 npm install
 ```
 
-- Run below command to export [CSDN](https://blog.csdn.net/) artitle to PDF (it's just a sample)
+- Run below command to export [CSDN](https://blog.csdn.net/gjmjack/) artitle to PDF (it's just a sample)
 
 ```powershell
-node csdntopdf.js -url https://blog.csdn.net/gjmjack/article/details/120338321
+node csdntopdf.js -url https://blog.csdn.net/gjmjack/gjmjack/article/details/120338321
 ```
 
 - Advanced usage please run below command
@@ -57,7 +57,7 @@ EXAMPLE:
 node csdntopdf.js # this will print the help information as well
 node csdntopdf.js -help # this will print the help information
 node csdntopdf.js -input D:\urls.txt # use a input file to provide urls
-node csdntopdf.js -url https://blog.csdn.net/gjmjack/article/details/120338321 # use inline command to export pages
+node csdntopdf.js -url https://blog.csdn.net/gjmjack/gjmjack/article/details/120338321 # use inline command to export pages
 ```
 
 ## Get help
@@ -79,7 +79,7 @@ node csdntopdf.js -url <string[]>
 
 # For example：
 EXAMPLE:
-node csdntopdf.js -url https://blog.csdn.net/gjmjack/article/details/120338321,https://blog.csdn.net/gjmjack/article/details/118695137
+node csdntopdf.js -url https://blog.csdn.net/gjmjack/gjmjack/article/details/120338321,https://blog.csdn.net/gjmjack/gjmjack/article/details/118695137
 
 ```
 
@@ -134,7 +134,7 @@ inject.css is used to control the output PDF style, which has hidden the unnessa
 
 ## Remarks
 
-This is currently suitable for [CSDN](https://blog.csdn.net/) articles. However you can change the inject.css and make it available for any other blog site as well.
+This is currently suitable for [CSDN](https://blog.csdn.net/gjmjack/) articles. However you can change the inject.css and make it available for any other blog site as well.
 
 Or even you can change the csdntopdf.js to make it automaticaly adjust for any site.
 
