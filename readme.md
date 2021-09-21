@@ -4,6 +4,10 @@ This is a node base javascript tool, which is used to quick export [CSDN](https:
 
 This is currently build for [CSDN](https://blog.csdn.net/gjmjack/) articles. However you can change the [inject.css](inject.css) and make it available for any other site as well. Or even you can change the [csdntopdf.js](./csdntopdf.js) to make it automaticaly adjust for any site.
 
+## Version history
+
+- 1.0.0 Init add
+
 ## Quick start
 
 - Install [nodejs](https://nodejs.org/en/) [14.16.1](https://nodejs.org/dist/v14.17.6/node-v14.17.6-x64.msi) or above
@@ -133,6 +137,5 @@ inject.css is used to control the output PDF style, which has hidden the unnessa
     }
 }
 ```
-
 
 # That's it and thanks for using this tool!
