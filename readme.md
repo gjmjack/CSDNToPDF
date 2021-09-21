@@ -1,6 +1,6 @@
-# Export CSDN article to PDF
+# Export [CSDN](https://blog.csdn.net/) article to PDF
 
-This is a node base javascript tool, which is used to quick export CSDN articles in pure mode (no ads, no recommendations). And it's build on [Puppeteer](http://www.puppeteerjs.com/) library.
+This is a node base javascript tool, which is used to quick export [CSDN](https://blog.csdn.net/) articles in pure mode (no ads, no recommendations). And it's build on [Puppeteer](http://www.puppeteerjs.com/) library.
 
 ## Quick start
 
@@ -11,7 +11,7 @@ This is a node base javascript tool, which is used to quick export CSDN articles
 npm install
 ```
 
-- Run below command to export CSDN artitle to PDF (it's just a sample)
+- Run below command to export [CSDN](https://blog.csdn.net/) artitle to PDF (it's just a sample)
 
 ```powershell
 node csdntopdf.js -url https://blog.csdn.net/gjmjack/article/details/120338321
@@ -134,7 +134,7 @@ inject.css is used to control the output PDF style, which has hidden the unnessa
 
 ## Remarks
 
-This is currently suitable for CSDN articles. However you can change the inject.css and make it available for any other blog site as well.
+This is currently suitable for [CSDN](https://blog.csdn.net/) articles. However you can change the inject.css and make it available for any other blog site as well.
 
 Or even you can change the csdntopdf.js to make it automaticaly adjust for any site.
 
