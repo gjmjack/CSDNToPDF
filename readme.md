@@ -4,7 +4,7 @@ This is a node base javascript tool, which used to quick export CSDN articles in
 
 ## Quick start
 
-- Install nodejs 14.16.1 version or above
+- Install [nodejs](https://nodejs.org/en/) [14.16.1](https://nodejs.org/dist/v14.17.6/node-v14.17.6-x64.msi) or above
 - Run below command to install the depenencies
 
 ```powershell
@@ -19,9 +19,12 @@ node csdntopdf.js -url https://blog.csdn.net/gjmjack/article/details/120338321
 
 - Advanced usage please run below command
 
-``` powershell
+``` shell
 node csdntopdf.js -help
 
+```
+
+```shell
 SYNTAX:
 
 node csdntopdf.js [-help] <[-input <string>] | [-url <string[]>]>
@@ -55,7 +58,6 @@ node csdntopdf.js # this will print the help information as well
 node csdntopdf.js -help # this will print the help information
 node csdntopdf.js -input D:\urls.txt # use a input file to provide urls
 node csdntopdf.js -url https://blog.csdn.net/gjmjack/article/details/120338321 # use inline command to export pages
-
 ```
 
 ## Get help
