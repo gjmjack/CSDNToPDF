@@ -23,7 +23,7 @@ node csdntopdf.js -help
 
 Usage:
 
-node csdntopdf.js [-help] <[-input <file path>]|[-url <[url 1] [,url 2] ... [,url n]>]>
+node csdntopdf.js [-help] <[ -input <file path>] | [ -url <[url 1] [,url 2] ... [,url n]>]>
 
 -help : Print command help information.
 -input <file path> : Specify a filename which contains urls need to be exported.
