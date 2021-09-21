@@ -1,6 +1,6 @@
 # Export CSDN article to PDF
 
-This is a node base javascript tool, which used to quick export CSDN articles in pure mode (no ads, no recommendations). And it's build on [Puppeteer](http://www.puppeteerjs.com/) library.
+This is a node base javascript tool, which is used to quick export CSDN articles in pure mode (no ads, no recommendations). And it's build on [Puppeteer](http://www.puppeteerjs.com/) library.
 
 ## Quick start
 
@@ -92,4 +92,50 @@ node csdntopdf.js -url https://blog.csdn.net/gjmjack/article/details/120338321,h
 node csdntopdf.js -input input_sample.txt
 ```
 
-## That's it enjoy that ^_^
+## Change the inject.css to as you wanted
+
+inject.css is used to control the output PDF style, which has hidden the unnessary element on the page and output a pure article in PDF format.
+
+```css
+
+@media print {
+    @page {
+        size: A4;
+        margin: 0;
+    }
+
+    /* hide the unnessary elements */
+    .recommend-box.insert-baidu-box,
+    div.comment-box,
+    .second-recommend-box.recommend-box,
+    .first-recommend-box.recommend-box,
+    div.blog-footer-bottom,
+    #toolBarBox,
+    div.csdn-side-toolbar,
+    aside.blog_container_aside,
+    #csdn-toolbar {
+        display: none !important;
+    }
+
+    /* Adjust the page size */
+    .nodata .container main {
+        width: 90% !important;
+    }
+
+    /* make the content in the page center */
+    .nodata .container {
+        width: 100% !important;
+        display: flex;
+        justify-content: center;
+        padding: 0;
+    }
+}
+```
+
+## Remarks
+
+This is currently suitable for CSDN articles. However you can change the inject.css and make it available for any other blog site as well.
+
+Or even you can change the csdntopdf.js to make it automaticaly adjust for any site.
+
+# That's it and thanks for using this tool!
