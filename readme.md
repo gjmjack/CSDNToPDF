@@ -30,43 +30,43 @@ node csdntopdf.js -help
 
 ```
 
-```shell
-SYNTAX:
+> SYNTAX:
+>
+> node csdntopdf.js [-help] <[-input <string>] | [-url <string[]>]>
+>
+> PARAMETERS:
+>
+>     -help
+> 
+>         Required?                   false
+>         Description                 Print command help information.
+> 
+>     -input <string> 
+> 
+>         Required?                   true
+>         Description                 Specify a filename which contains urls need > to be exported.
+> 
+>     -url <string[]> 
+> 
+>         Required?                   true
+>         Description                 Specify one or more URLs which need to be exported, each URL will be separated by ','. 
+> 
+> OUTPUTS:
+>     Pdf file
+> 
+> REMARKS:
+>     -input and -url must specify at list one.
+>
+> EXAMPLE:
+> 
+> node csdntopdf.js # this will print the help information as well
+> node csdntopdf.js -help # this will print the help information
+> node csdntopdf.js -input D:\urls.txt # use a input file to provide urls
+> node csdntopdf.js -url <https://blog.csdn.net/gjmjack/article/details/120338321> 
 
-node csdntopdf.js [-help] <[-input <string>] | [-url <string[]>]>
+## use inline command to export pages
 
-PARAMETERS:
-
-    -help 
-
-        Required?                   false
-        Description                 Print command help information.
-
-    -input <string> 
-
-        Required?                   true
-        Description                 Specify a filename which contains urls need to be exported.
-
-    -url <string[]> 
-
-        Required?                   true
-        Description                 Specify one or more URLs which need to be exported, each URL will be separated by ','. 
-
-OUTPUTS:
-    Pdf file
-
-REMARKS:
-    -input and -url must specify at list one.
-
-EXAMPLE:
-
-node csdntopdf.js # this will print the help information as well
-node csdntopdf.js -help # this will print the help information
-node csdntopdf.js -input D:\urls.txt # use a input file to provide urls
-node csdntopdf.js -url https://blog.csdn.net/gjmjack/article/details/120338321 # use inline command to export pages
-```
-
-## Get help
+### Get help
 
 ```powershell
 node csdntopdf.js -help 
@@ -76,7 +76,7 @@ node csdntopdf.js -help
 node csdntopdf.js
 ```
 
-## Export articles with inline command
+### Export articles with inline command
 
 ```shell
 
@@ -89,7 +89,7 @@ node csdntopdf.js -url https://blog.csdn.net/gjmjack/article/details/120338321,h
 
 ```
 
-## Export articles use a file as input
+### Export articles use a file as input
 
 - Clear the content of input_sample.txt and add URLs into input_sample.txt
 - Run the command as blow
@@ -138,4 +138,4 @@ inject.css is used to control the output PDF style, which has hidden the unnessa
 }
 ```
 
-# That's it and thanks for using this tool!
+# That's it and thanks for using this tool
