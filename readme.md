@@ -31,40 +31,39 @@ node csdntopdf.js -help
 ```
 
 ``` shell
-# Output as below:
 
-#  SYNTAX:
+ SYNTAX:
 
-#  node csdntopdf.js [-help] <[-input <string>] | [-url <string[]>]>
+ node csdntopdf.js [-help] <[-input <string>] | [-url <string[]>]>
 
-#  PARAMETERS:
-#      -help
+ PARAMETERS:
+     -help
 
-#          Required?                   false
-#          Description                 Print command help information.
+         Required?                   false
+         Description                 Print command help information.
  
-#      -input <string> 
+     -input <string> 
  
-#          Required?                   true
-#          Description                 Specify a filename which contains urls need  to be exported.
+         Required?                   true
+         Description                 Specify a filename which contains urls need  to be exported.
  
-#      -url <string[]> 
+     -url <string[]> 
  
-#          Required?                   true
-#          Description                 Specify one or more URLs which need to be exported, each URL will be separated by ','. 
+         Required?                   true
+         Description                 Specify one or more URLs which need to be exported, each URL will be separated by ','. 
 
-#  OUTPUTS:
-#      Pdf file
+ OUTPUTS:
+     Pdf file
 
-#  REMARKS:
-#      -input and -url must specify at list one.
+ REMARKS:
+     -input and -url must specify at list one.
 
-#  EXAMPLE:
+ EXAMPLE:
 
-#  node csdntopdf.js # this will print the help information as well
-#  node csdntopdf.js -help # this will print the help information
-#  node csdntopdf.js -input D:\urls.txt # use a input file to provide urls
-#  node csdntopdf.js -url <https://blog.csdn.net/gjmjack/article/details/120338321> 
+ node csdntopdf.js # this will print the help information as well
+ node csdntopdf.js -help # this will print the help information
+ node csdntopdf.js -input D:\urls.txt # use a input file to provide urls
+ node csdntopdf.js -url <https://blog.csdn.net/gjmjack/article/details/120338321> 
 
 ```
 
