@@ -1,8 +1,8 @@
-# Export [CSDN](https://blog.csdn.net/gjmjack/) pure article to PDF
+# Export [CSDN](https://blog.csdn.net/gjmjack/) article purely to PDF with Puppeteer
 
 This is a node base javascript tool, which is used to quick export [CSDN](https://blog.csdn.net/gjmjack/) articles in pure mode (no ads, no recommendations). And it's build on [Puppeteer](http://www.puppeteerjs.com/) library.
 
-This is currently build for [CSDN](https://blog.csdn.net/gjmjack/) articles. However you can change the inject.css and make it available for any other site as well. Or even you can change the csdntopdf.js to make it automaticaly adjust for any site.
+This is currently build for [CSDN](https://blog.csdn.net/gjmjack/) articles. However you can change the [inject.css](inject.css) and make it available for any other site as well. Or even you can change the [csdntopdf.js](./csdntopdf.js) to make it automaticaly adjust for any site.
 
 ## Quick start
 
