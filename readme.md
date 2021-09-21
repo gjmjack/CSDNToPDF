@@ -1,4 +1,4 @@
-# Export [CSDN](https://blog.csdn.net/gjmjack/) article to PDF
+# Export [CSDN](https://blog.csdn.net/gjmjack/) pure article to PDF
 
 This is a node base javascript tool, which is used to quick export [CSDN](https://blog.csdn.net/gjmjack/) articles in pure mode (no ads, no recommendations). And it's build on [Puppeteer](http://www.puppeteerjs.com/) library.
 
