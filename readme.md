@@ -26,7 +26,37 @@ Examples:
 
 node csdntopdf.js # this will print the help information as well
 node csdntopdf.js -help # this will print the help information
-node csdntopdf.js -input D:\\urls.txt # use a input file to provide urls
+node csdntopdf.js -input D:\urls.txt # use a input file to provide urls
 node csdntopdf.js -url https://blog.csdn.net/gjmjack/article/details/120338321 # use inline command to export pages
 
+```
+
+## Get help
+
+```
+node csdntopdf.js -help 
+
+# or
+
+node csdntopdf.js
+```
+
+## Export articles with inline command
+
+```
+node csdntopdf.js -url <[url 1] [,url 2] ... [,url n]>]>
+
+# For example：
+
+node csdntopdf.js -url https://blog.csdn.net/gjmjack/article/details/120338321,https://blog.csdn.net/gjmjack/article/details/118695137
+
+```
+
+## Export articles use a file as input
+
+- Clear the content of input_sample.txt and add URLs into input_sample.txt
+- Run the command as blow
+
+```
+node csdntopdf.js -input input_sample.txt
 ```
