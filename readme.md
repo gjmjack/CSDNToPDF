@@ -14,7 +14,7 @@ npm install
 - Run below command to export [CSDN](https://blog.csdn.net/gjmjack/) artitle to PDF (it's just a sample)
 
 ```powershell
-node csdntopdf.js -url https://blog.csdn.net/gjmjack/gjmjack/article/details/120338321
+node csdntopdf.js -url https://blog.csdn.net/gjmjack/article/details/120338321
 ```
 
 - Advanced usage please run below command
@@ -57,7 +57,7 @@ EXAMPLE:
 node csdntopdf.js # this will print the help information as well
 node csdntopdf.js -help # this will print the help information
 node csdntopdf.js -input D:\urls.txt # use a input file to provide urls
-node csdntopdf.js -url https://blog.csdn.net/gjmjack/gjmjack/article/details/120338321 # use inline command to export pages
+node csdntopdf.js -url https://blog.csdn.net/gjmjack/article/details/120338321 # use inline command to export pages
 ```
 
 ## Get help
@@ -79,7 +79,7 @@ node csdntopdf.js -url <string[]>
 
 # For example：
 EXAMPLE:
-node csdntopdf.js -url https://blog.csdn.net/gjmjack/gjmjack/article/details/120338321,https://blog.csdn.net/gjmjack/gjmjack/article/details/118695137
+node csdntopdf.js -url https://blog.csdn.net/gjmjack/article/details/120338321,https://blog.csdn.net/gjmjack/article/details/118695137
 
 ```
 
