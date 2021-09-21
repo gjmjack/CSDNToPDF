@@ -6,17 +6,17 @@ let argError = false;
 let usage = `
 Usage:
 
-node csdntopdf.js [-help] <[-inputfile <file path>]|[-url <[url1][,url2]...[,urln]>]>
+node csdntopdf.js [-help] <[-input <file path>]|[-url <[url 1] [,url 2] ... [,url n]>]>
 
 -help : Print command help information.
--inputfile <file path> : Specify a filename which contains urls need to be exported.
--url <[url1][,url2]...[,urln]>] : Specify one or more URLs which need to be exported, each URL will be separated by ','. 
+-input <file path> : Specify a filename which contains urls need to be exported.
+-url <[url 1] [,url 2]...[,url n]>] : Specify one or more URLs which need to be exported, each URL will be separated by ','. 
 
 Examples:
 
 node csdntopdf.js # this will print the help information as well
 node csdntopdf.js -help # this will print the help information
-node csdntopdf.js -inputfile D:\\urls.txt # use a input file to provide urls
+node csdntopdf.js -input D:\\urls.txt # use a input file to provide urls
 node csdntopdf.js -url https://blog.csdn.net/gjmjack/article/details/120338321 # use inline command to export pages
 
 `
@@ -26,9 +26,9 @@ for (let j = 0; j < process.argv.length; j++) {
     argError = true;
     break;
   }
-  if (process.argv[j] == '-inputfile' || process.argv[j] == '-url') {
+  if (process.argv[j] == '-input' || process.argv[j] == '-url') {
     if (j + 1 < process.argv.length) {
-      if (process.argv[j] == '-inputfile') {
+      if (process.argv[j] == '-input') {
         let filename = process.argv[j + 1]
         if (fs.existsSync(filename)) {
           InputFile = filename;
