@@ -7,18 +7,18 @@ This is a node base javascript tool, which used to quick export CSDN articles in
 - Install nodejs 14.16.1 version or above
 - Run below command to install the depenencies
 
-```shell
+```powershell
 npm install
 ```
 - Run below command to export CSDN artitle to PDF (it's just a sample)
 
-```
+```powershell
 node csdntopdf.js -url https://blog.csdn.net/gjmjack/article/details/120338321
 ```
 
 - Advanced usage please run below command
 
-``` shell
+``` powershell
 node csdntopdf.js -help
 
 Usage:
@@ -40,7 +40,7 @@ node csdntopdf.js -url https://blog.csdn.net/gjmjack/article/details/120338321 #
 
 ## Get help
 
-```
+```powershell
 node csdntopdf.js -help 
 
 # or
@@ -50,7 +50,7 @@ node csdntopdf.js
 
 ## Export articles with inline command
 
-```
+```powershell
 node csdntopdf.js -url <[url 1] [,url 2] ... [,url n]>]>
 
 # For example：
@@ -64,7 +64,7 @@ node csdntopdf.js -url https://blog.csdn.net/gjmjack/article/details/120338321,h
 - Clear the content of input_sample.txt and add URLs into input_sample.txt
 - Run the command as blow
 
-```
+```powershell
 node csdntopdf.js -input input_sample.txt
 ```
 
