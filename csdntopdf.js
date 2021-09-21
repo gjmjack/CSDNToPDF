@@ -5,15 +5,35 @@ let URLS = []
 let argError = false;
 let injectCss = fs.readFileSync('inject.css', { encoding: 'utf-8', flag: 'r' })
 let usage = `
-Usage:
 
-node csdntopdf.js [-help] <[-input <file path>]|[-url <[url 1] [,url 2] ... [,url n]>]>
+SYNTAX:
 
--help : Print command help information.
--input <file path> : Specify a filename which contains urls need to be exported.
--url <[url 1] [,url 2]...[,url n]>] : Specify one or more URLs which need to be exported, each URL will be separated by ','. 
+node csdntopdf.js [-help] <[-input <string>] | [-url <string[]>]>
 
-Examples:
+PARAMETERS:
+
+    -help 
+
+        Required?                   false
+        Description                 Print command help information.
+
+    -input <string> 
+
+        Required?                   true
+        Description                 Specify a filename which contains urls need to be exported.
+
+    -url <string[]> 
+
+        Required?                   true
+        Description                 Specify one or more URLs which need to be exported, each URL will be separated by ','. 
+
+OUTPUTS:
+    Pdf file
+
+REMARKS:
+    -input and -url must specify at list one.
+
+EXAMPLE:
 
 node csdntopdf.js # this will print the help information as well
 node csdntopdf.js -help # this will print the help information
