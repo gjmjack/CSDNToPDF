@@ -14,8 +14,10 @@ node csdntopdf.js [-help] <[-inputfile <file path>]|[-url <[url1][,url2]...[,url
 
 Examples:
 
-node csdntopdf.js -inputfile D:\\urls.txt
-node csdntopdf.js -url D:\\urls.txt
+node csdntopdf.js # this will print the help information as well
+node csdntopdf.js -help # this will print the help information
+node csdntopdf.js -inputfile D:\\urls.txt # use a input file to provide urls
+node csdntopdf.js -url https://blog.csdn.net/gjmjack/article/details/120338321 # use inline command to export pages
 
 `
 
