@@ -1,13 +1,87 @@
 const puppeteer = require('puppeteer');
+const fs = require('fs')
+let InputFile = null
+let URLS = []
+let argError = false;
+let usage = `
+Usage:
+
+node csdntopdf.js [-help] <[-inputfile <file path>]|[-url <[url1][,url2]...[,urln]>]>
+
+-help : Print command help information.
+-inputfile <file path> : Specify a filename which contains urls need to be exported.
+-url <[url1][,url2]...[,urln]>] : Specify one or more URLs which need to be exported, each URL will be separated by ','. 
+
+Examples:
+
+node csdntopdf.js -inputfile D:\\urls.txt
+node csdntopdf.js -url D:\\urls.txt
+
+`
+
+for (let j = 0; j < process.argv.length; j++) {
+  if (process.argv[j] == '-help') {
+    argError = true;
+    break;
+  }
+  if (process.argv[j] == '-inputfile' || process.argv[j] == '-url') {
+    if (j + 1 < process.argv.length) {
+      if (process.argv[j] == '-inputfile') {
+        let filename = process.argv[j + 1]
+        if (fs.existsSync(filename)) {
+          InputFile = filename;
+        }
+        else {
+          console.error(filename + " not exists.")
+          argError = true;
+          break;
+
+        }
+      }
+      else {
+        URLS = URLS.concat(process.argv[j + 1].split(','))
+      }
+    }
+    else {
+      argError = true;
+      break;
+    }
+  }
+}
+
+if (argError || (InputFile == null && URLS.length == 0)) {
+  console.log(usage)
+  return
+}
+
+if (InputFile != null) {
+  let filecontent = fs.readFileSync(InputFile, { encoding: 'utf-8', flag: 'r' })
+  URLS = URLS.concat(filecontent.split('\r\n'))
+}
+
 
 (async () => {
   try {
     const browser = await puppeteer.launch();
+    console.log("Start to exporting PDF files [" + URLS.length + "]")
+
     const page = await browser.newPage();
-    await page.goto('https://blog.csdn.net/gjmjack/article/details/120338321', { waitUntil: 'networkidle2' });
-    await page.addStyleTag(
-      {
-        content: `
+    const total = URLS.length;
+
+    for (let j = 0; j < URLS.length; j++) {
+      const url = URLS[j];
+      console.log("[" + (j + 1) + "/" + total + "] Exporting: " + url)
+
+      try {
+        await page.goto(url, { waitUntil: 'networkidle2' });
+
+        let title = await page.title();
+        title = title.replace(/[_](.+)的博客[-]CSDN博客$/gi, '')
+        title = title.replace(/[\\\/\:\*\?\"\<\>\|？：]/gi, '_')
+
+        await page.addStyleTag(
+          {
+            content: `
         .recommend-box.insert-baidu-box,
         div.comment-box,
         .second-recommend-box.recommend-box,
@@ -27,15 +101,21 @@ const puppeteer = require('puppeteer');
           padding:0;
         }
           `
-      })
+          })
 
-    await page.pdf({
-      path: '如何一行代码（脚本）刷抖音快手视频？老司机教你如何薅羊毛（二）【多线程版】.pdf',
-      format: 'A4'
-    });
-
+        await page.pdf({
+          path: title + '.pdf',
+          format: 'A4'
+        });
+      } catch (error) {
+        console.error("[" + (j + 1) + "/" + total + "] Exporting:" + url + " failed")
+        console.error(error)
+      }
+    }
 
     await browser.close();
+    console.log("Exported all pages.")
   } catch (error) {
+
   }
 })();
