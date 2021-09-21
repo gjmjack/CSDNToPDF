@@ -1,6 +1,8 @@
-# Export CSDN Article to PDF
+# Export CSDN article to PDF
 
-## Steps to run
+This is a node base javascript tool, which used to quick export CSDN articles in pure mode (no ads, no recommendations). And it's build on [Puppeteer](http://www.puppeteerjs.com/) library.
+
+## Quick start
 
 - Install nodejs 14.16.1 version or above
 - Run below command to install the depenencies
@@ -8,8 +10,13 @@
 ```shell
 npm install
 ```
+- Run below command to export CSDN artitle to PDF (it's just a sample)
 
-- Run below command to get help information
+```
+node csdntopdf.js -url https://blog.csdn.net/gjmjack/article/details/120338321
+```
+
+- Advanced usage please run below command
 
 ``` shell
 node csdntopdf.js -help
@@ -60,3 +67,5 @@ node csdntopdf.js -url https://blog.csdn.net/gjmjack/article/details/120338321,h
 ```
 node csdntopdf.js -input input_sample.txt
 ```
+
+## That's it enjoy that ^_^

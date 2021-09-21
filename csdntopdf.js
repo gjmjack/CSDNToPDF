@@ -3,6 +3,7 @@ const fs = require('fs')
 let InputFile = null
 let URLS = []
 let argError = false;
+let injectCss = fs.readFileSync('inject.css', { encoding: 'utf-8', flag: 'r' })
 let usage = `
 Usage:
 
@@ -62,6 +63,7 @@ if (InputFile != null) {
 }
 
 
+
 (async () => {
   try {
     const browser = await puppeteer.launch();
@@ -83,26 +85,7 @@ if (InputFile != null) {
 
         await page.addStyleTag(
           {
-            content: `
-        .recommend-box.insert-baidu-box,
-        div.comment-box,
-        .second-recommend-box.recommend-box,
-        .first-recommend-box.recommend-box,
-        div.blog-footer-bottom,
-        #toolBarBox,
-        div.csdn-side-toolbar,
-        aside.blog_container_aside,
-        #csdn-toolbar{
-          display:none !important;
-        }
-        .nodata .container main {width: 90% !important;}
-        .nodata .container {
-          width: 100% !important;
-          display:flex;
-          justify-content:center;
-          padding:0;
-        }
-          `
+            content: injectCss
           })
 
         await page.pdf({
