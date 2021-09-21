@@ -35,9 +35,8 @@ node csdntopdf.js -help
 > node csdntopdf.js [-help] <[-input <string>] | [-url <string[]>]>
 >
 > PARAMETERS:
->
 >     -help
-> 
+>
 >         Required?                   false
 >         Description                 Print command help information.
 > 
@@ -50,15 +49,15 @@ node csdntopdf.js -help
 > 
 >         Required?                   true
 >         Description                 Specify one or more URLs which need to be exported, each URL will be separated by ','. 
-> 
+>
 > OUTPUTS:
 >     Pdf file
-> 
+>
 > REMARKS:
 >     -input and -url must specify at list one.
 >
 > EXAMPLE:
-> 
+>
 > node csdntopdf.js # this will print the help information as well
 > node csdntopdf.js -help # this will print the help information
 > node csdntopdf.js -input D:\urls.txt # use a input file to provide urls
@@ -80,11 +79,9 @@ node csdntopdf.js
 
 ```shell
 
-SYNTAX:
-node csdntopdf.js -url <string[]>
-
-# For example：
-EXAMPLE:
+# SYNTAX:
+# node csdntopdf.js -url <string[]>
+# EXAMPLE:
 node csdntopdf.js -url https://blog.csdn.net/gjmjack/article/details/120338321,https://blog.csdn.net/gjmjack/article/details/118695137
 
 ```
